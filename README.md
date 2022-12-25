@@ -215,3 +215,5 @@ In this tutorial, you learned how to:
 
 > Note: remember to delete any Azure resources created during this sample to avoid unnecessary charges.
 # azure_webapp_iot02
+Note: remember to delete any Azure resources created during this sample to avoid unnecessary charges.
+

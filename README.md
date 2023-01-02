@@ -16,7 +16,7 @@ This repo contains code for a web application, which can read temperature and hu
 
 ## setup
 In an azure resource group, create iot hub. then register a device in the iot hub. the device will be used to receive data from a physical/simulated iot device (e.g. raspberry pi). Run your raspberry pi to send data to azure (to the registred device). For consuming the data (e.g. visualizing the data) a consumer group should be added to the iot hub.
-An application for visualizing the data is needed. 
+An application for visualizing the data is needed. The open source project "web-app-node-iot-hub-data-visualization" from azure-samples on github can be used.
 
 ## Browser compatiblity
 

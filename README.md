@@ -15,7 +15,7 @@ description: "This repo contains code for a web application, which can read temp
 This repo contains code for a web application, which can read temperature and humidity data from IoT Hub and show the real-time data in a line chart on the web page.
 
 ## setup
-In an azure resource group, create iot hub. then register a device in the iot hub. the device will be used to receive data from a physical/simulated iot device (e.g. raspberry pi)
+In an azure resource group, create iot hub. then register a device in the iot hub. the device will be used to receive data from a physical/simulated iot device (e.g. raspberry pi). Run your raspberry pi to send data to azure (to the registred device)
 
 ## Browser compatiblity
 

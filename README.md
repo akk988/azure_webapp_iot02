@@ -20,6 +20,7 @@ An application for visualizing the data is needed. The open source project "web-
 To deploy the application in azure, an azure app service can be used and an azure web app should be created. Credentials can be added as value pairs in the web app. The communication protocol websocket should be activated.
 As the azure web application is available on github, a local git can be used and user and password should be created.
 Using git commands, the app can be deployed from the repository (e.g. local repo) to azure. After that, run the web app in azure. 
+In the overview of the web app in azure consol, the URL can be found. This URL opens the web page of the visualized iot data.
 
 ## Browser compatiblity
 

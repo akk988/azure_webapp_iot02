@@ -22,6 +22,32 @@ As the azure web application is available on github, a local git can be used and
 Using git commands, the app can be deployed from the repository (e.g. local repo) to azure. After that, run the web app in azure. 
 In the overview of the web app in azure consol, the URL can be found. This URL opens the web page of the visualized iot data.
 
+### Host the webapp as code in azure app service
+As in this tutoria (run locally doesnt work!, only in cloud shell) -> https://github.com/Azure-Samples/web-apps-node-iot-hub-data-visualization#run-locally
+az appservice plan create --name <app service plan name> --resource-group <your resource group name> --sku FREE
+
+create windows webapp! (use the console if not sure about the command, then in deployment center, change source to local git, add key/values, turn on websocket)
+
+(x do it in the consol) az webapp create -n <your web app name> -g <your resource group name> -p <your app service plan name> --runtime "node|10.6" --deployment-local-git
+(x do it in the consol) az webapp config appsettings set -n <your web app name> -g <your resource group name> --settings EventHubConsumerGroup=<your consumer group> (x do it in the consol) IotHubConnectionString="<your IoT hub connection string>"
+(x do it in the consol) az webapp config set -n <your web app name> -g <your resource group name> --web-sockets-enabled true
+(x do it in the consol) az webapp update -n <your web app name> -g <your resource group name> --https-only true
+
+az webapp deployment user set --user-name dwa --password 
+az webapp deployment source config-local-git --name kl-webapp --resource-group TH432KL_HDIC
+
+On the "local" git bash (azure cloud shell): 
+clone the repo & edit the key vlaues in launch.json and save
+cd in the cloned repo
+git remote add azure (https://trumpf@kl-webapp.scm.azurewebsites.net/kl-webappwin.git)
+git push azure master
+user: dwa
+password: 
+az webapp show -n <your web app name> -g <your resource group name> --query state
+
+Open the url and start the iot device to visualize the data
+### Host the webapp as container in azure app service
+
 ## Browser compatiblity
 
 | Browser | Verified version |

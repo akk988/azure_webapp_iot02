@@ -53,6 +53,10 @@ Create DevOps, pipeline ..
 
 Create WebApp as container (not code) to host the container
 run the container with env variables iothubConnectionstring and consumer group
+
+    
+    ![image](https://user-images.githubusercontent.com/47817165/212619251-ca16a1f0-156c-44fa-977f-d5b2b5f1daea.png)
+
     
     
     

@@ -32,7 +32,10 @@ create windows webapp! (use the console if not sure about the command, then in d
 (x do it in the consol) az webapp config appsettings set -n <your web app name> -g <your resource group name> --settings EventHubConsumerGroup=<your consumer group> (x do it in the consol) IotHubConnectionString="<your IoT hub connection string>"
 (x do it in the consol) az webapp config set -n <your web app name> -g <your resource group name> --web-sockets-enabled true
 (x do it in the consol) az webapp update -n <your web app name> -g <your resource group name> --https-only true
-
+Select Settings | Configuration
+Select Application settings and add key/value pairs for:
+Add IotHubConnectionString (not the device connection string!!!!) and the corresponding value.
+Add EventHubConsumerGroup and the corresponding value.
 az webapp deployment user set --user-name dwa --password 
 az webapp deployment source config-local-git --name kl-webapp --resource-group TH432KL_HDIC
 
@@ -46,6 +49,9 @@ password:
 az webapp show -n <your web app name> -g <your resource group name> --query state
 
 Open the url and start the iot device to visualize the data
+
+
+
 ### Host the webapp as container in azure app service
 Write Dockerfile for the same wepApp and push to github -> https://github.com/akk988/azure_webapp_iot02
 Create DevOps, pipeline .. 

@@ -50,11 +50,17 @@ az webapp show -n <your web app name> -g <your resource group name> --query stat
 
 Open the url and start the iot device to visualize the data
 
-
+    - create docker image (this repo)
+    - push it to docker hub: abdulkhalil/dwa:v1
+    - create container webapp - OS:linux
+    - set the name of your container: abdulkhalil/dwa:v1
+    - No startup command required
+    - Set the key/value in the webapp config, app setting of the iothub connection string (NOT device con. str.), the consumer group and the container start time
 
 ### Host the webapp as container in azure app service
 Write Dockerfile for the same wepApp and push to github -> https://github.com/akk988/azure_webapp_iot02
-Create DevOps, pipeline .. 
+
+    
 
 
 Create WebApp as container (not code) to host the container

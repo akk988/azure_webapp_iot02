@@ -272,7 +272,9 @@ In this tutorial, you learned how to:
 - On a website, register for device telemetry and broadcast it over a web socket to attached clients
 - In a web page, display device data in a chart
 
-> Note: remember to delete any Azure resources created during this sample to avoid unnecessary charges.
+##Important
+Note: remember to delete any Azure resources created during this sample to avoid unnecessary charges.
+
 # azure_webapp_iot02
 Note: remember to delete any Azure resources created during this sample to avoid unnecessary charges.
 
